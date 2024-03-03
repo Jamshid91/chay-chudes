@@ -1,0 +1,773 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>товар</title>
+    <link rel="shortcut icon" href="assets/img/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="assets/css/plugin/bootstrap.css">
+    <link rel="stylesheet" href="assets/css/plugin/swiper.css">
+    <link rel="stylesheet" href="assets/css/main.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-top">
+            <img src="assets/img/png/leaf-top.png" alt="" class="leaf d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center justify-content-between">
+                        <div class="header-search d-none d-lg-block">
+                            <div class="search">
+                                <input type="text" class="search__inp" placeholder="Поиск">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3434 15.6023L12.0834 11.4104C13.199 10.1983 13.8844 8.59541 13.8844 6.83156C13.8839 3.05835 10.776 0 6.94194 0C3.10788 0 0 3.05835 0 6.83156C0 10.6048 3.10788 13.6631 6.94194 13.6631C8.59851 13.6631 10.1179 13.0901 11.3113 12.1375L15.5879 16.346C15.7963 16.5513 16.1346 16.5513 16.343 16.346C16.3925 16.2976 16.4319 16.2398 16.4588 16.176C16.4857 16.1121 16.4996 16.0436 16.4997 15.9743C16.4997 15.905 16.4859 15.8364 16.4591 15.7725C16.4323 15.7087 16.3929 15.6508 16.3434 15.6023ZM6.94194 12.612C3.69791 12.612 1.06811 10.024 1.06811 6.83156C1.06811 3.63908 3.69791 1.05108 6.94194 1.05108C10.186 1.05108 12.8158 3.63908 12.8158 6.83156C12.8158 10.024 10.186 12.612 6.94194 12.612Z" fill="#7A7A83"/>
+                                </svg>
+                            </div>
+                        </div>
+                        <div class="regis-btn d-lg-none">
+                            <button class="regis_btn">
+                                <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M8.7853 4.5842e-07C6.98732 -0.00035141 5.23254 0.551074 3.75795 1.57981C2.28336 2.60854 1.15998 4.06502 0.539542 5.75255C-0.0809001 7.44009 -0.168522 9.27737 0.288509 11.0163C0.745541 12.7552 1.72521 14.312 3.09521 15.4764C3.10161 15.4823 3.10802 15.488 3.11472 15.4935C3.13407 15.5099 3.15224 15.5275 3.1719 15.5437C4.74918 16.8539 6.73509 17.5712 8.78559 17.5712C10.8361 17.5712 12.822 16.8539 14.3993 15.5437C14.4206 15.5261 14.4402 15.5071 14.4612 15.4893C14.4693 15.4825 14.4772 15.4761 14.4846 15.4688C15.8525 14.3033 16.8299 12.7462 17.2851 11.0077C17.7402 9.26924 17.6511 7.43298 17.0298 5.74672C16.4085 4.06045 15.2849 2.60533 13.8107 1.57771C12.3364 0.550092 10.5824 -0.00058 8.7853 4.5842e-07ZM13.7335 14.9314C12.3318 16.0611 10.5856 16.6772 8.7853 16.6772C6.98495 16.6772 5.2388 16.0611 3.83705 14.9314C3.83705 14.9175 3.83571 14.904 3.83571 14.8903C3.83571 12.5092 6.05603 10.5721 8.7853 10.5721C11.5146 10.5721 13.7349 12.5092 13.7349 14.8903C13.7349 14.9041 13.7337 14.9177 13.7335 14.9314ZM5.95611 6.8496C5.95611 6.29004 6.12204 5.74305 6.43291 5.27779C6.74379 4.81254 7.18565 4.44991 7.70261 4.23578C8.21958 4.02164 8.78843 3.96562 9.33724 4.07478C9.88605 4.18395 10.3902 4.4534 10.7858 4.84907C11.1815 5.24474 11.451 5.74885 11.5601 6.29766C11.6693 6.84647 11.6133 7.41532 11.3991 7.93229C11.185 8.44925 10.8224 8.89111 10.3571 9.20198C9.89185 9.51286 9.34486 9.67879 8.7853 9.67879C8.0352 9.67796 7.31607 9.37962 6.78567 8.84923C6.25528 8.31883 5.95694 7.5997 5.95611 6.8496ZM14.5686 14.1522C14.2613 12.2277 12.7718 10.638 10.7784 9.99134C11.4594 9.55965 11.9818 8.91853 12.2671 8.1644C12.5524 7.41026 12.5851 6.58389 12.3604 5.80956C12.1356 5.03522 11.6655 4.35479 11.0208 3.87059C10.3761 3.3864 9.59159 3.12462 8.7853 3.12462C7.979 3.12462 7.19451 3.3864 6.54979 3.87059C5.90507 4.35479 5.43499 5.03522 5.21023 5.80956C4.98548 6.58389 5.01821 7.41026 5.3035 8.1644C5.58879 8.91853 6.11122 9.55965 6.79221 9.99134C4.79883 10.6385 3.30933 12.2277 3.002 14.1522C1.95686 13.0266 1.2629 11.6205 1.00522 10.1063C0.747527 8.59205 0.937308 7.03554 1.55129 5.62761C2.16527 4.21967 3.17676 3.0215 4.46173 2.18002C5.74671 1.33854 7.24931 0.890316 8.7853 0.890316C10.3213 0.890316 11.8239 1.33854 13.1089 2.18002C14.3938 3.0215 15.4053 4.21967 16.0193 5.62761C16.6333 7.03554 16.8231 8.59205 16.5654 10.1063C16.3077 11.6205 15.6137 13.0266 14.5686 14.1522Z" fill="white"/>
+                                </svg>
+                                <span>Войти</span>
+                            </button>
+                        </div>
+                        <a href="./index.html" class="header-logo d-flex flex-column align-items-center">
+                            <img src="assets/img/svg/logo.svg" alt="" class="logo">
+                            <img src="assets/img/svg/text.svg" alt="" class="header-middle-text">
+                        </a>
+                        <div class="d-flex align-items-center">
+                            <div class="header-basket d-flex align-items-center">
+                                <div class="basket">
+                                    <img src="assets/img/svg/basket.svg" alt="">
+                                    <span class="basket-count">1</span>
+                                </div>
+                                <span class="basket-price"><span class="price">2 500</span> ₽</span>
+                            </div>
+                            <div class="regis-btn d-none d-lg-flex">
+                                <button class="regis_btn">
+                                    <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.7853 4.5842e-07C6.98732 -0.00035141 5.23254 0.551074 3.75795 1.57981C2.28336 2.60854 1.15998 4.06502 0.539542 5.75255C-0.0809001 7.44009 -0.168522 9.27737 0.288509 11.0163C0.745541 12.7552 1.72521 14.312 3.09521 15.4764C3.10161 15.4823 3.10802 15.488 3.11472 15.4935C3.13407 15.5099 3.15224 15.5275 3.1719 15.5437C4.74918 16.8539 6.73509 17.5712 8.78559 17.5712C10.8361 17.5712 12.822 16.8539 14.3993 15.5437C14.4206 15.5261 14.4402 15.5071 14.4612 15.4893C14.4693 15.4825 14.4772 15.4761 14.4846 15.4688C15.8525 14.3033 16.8299 12.7462 17.2851 11.0077C17.7402 9.26924 17.6511 7.43298 17.0298 5.74672C16.4085 4.06045 15.2849 2.60533 13.8107 1.57771C12.3364 0.550092 10.5824 -0.00058 8.7853 4.5842e-07ZM13.7335 14.9314C12.3318 16.0611 10.5856 16.6772 8.7853 16.6772C6.98495 16.6772 5.2388 16.0611 3.83705 14.9314C3.83705 14.9175 3.83571 14.904 3.83571 14.8903C3.83571 12.5092 6.05603 10.5721 8.7853 10.5721C11.5146 10.5721 13.7349 12.5092 13.7349 14.8903C13.7349 14.9041 13.7337 14.9177 13.7335 14.9314ZM5.95611 6.8496C5.95611 6.29004 6.12204 5.74305 6.43291 5.27779C6.74379 4.81254 7.18565 4.44991 7.70261 4.23578C8.21958 4.02164 8.78843 3.96562 9.33724 4.07478C9.88605 4.18395 10.3902 4.4534 10.7858 4.84907C11.1815 5.24474 11.451 5.74885 11.5601 6.29766C11.6693 6.84647 11.6133 7.41532 11.3991 7.93229C11.185 8.44925 10.8224 8.89111 10.3571 9.20198C9.89185 9.51286 9.34486 9.67879 8.7853 9.67879C8.0352 9.67796 7.31607 9.37962 6.78567 8.84923C6.25528 8.31883 5.95694 7.5997 5.95611 6.8496ZM14.5686 14.1522C14.2613 12.2277 12.7718 10.638 10.7784 9.99134C11.4594 9.55965 11.9818 8.91853 12.2671 8.1644C12.5524 7.41026 12.5851 6.58389 12.3604 5.80956C12.1356 5.03522 11.6655 4.35479 11.0208 3.87059C10.3761 3.3864 9.59159 3.12462 8.7853 3.12462C7.979 3.12462 7.19451 3.3864 6.54979 3.87059C5.90507 4.35479 5.43499 5.03522 5.21023 5.80956C4.98548 6.58389 5.01821 7.41026 5.3035 8.1644C5.58879 8.91853 6.11122 9.55965 6.79221 9.99134C4.79883 10.6385 3.30933 12.2277 3.002 14.1522C1.95686 13.0266 1.2629 11.6205 1.00522 10.1063C0.747527 8.59205 0.937308 7.03554 1.55129 5.62761C2.16527 4.21967 3.17676 3.0215 4.46173 2.18002C5.74671 1.33854 7.24931 0.890316 8.7853 0.890316C10.3213 0.890316 11.8239 1.33854 13.1089 2.18002C14.3938 3.0215 15.4053 4.21967 16.0193 5.62761C16.6333 7.03554 16.8231 8.59205 16.5654 10.1063C16.3077 11.6205 15.6137 13.0266 14.5686 14.1522Z" fill="white"/>
+                                    </svg>
+                                    <span>Войти</span>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12 d-flex justify-content-center">
+                    </div>
+                </div>
+            </div>
+        </div>
+        <nav class="header-nav d-none d-lg-block">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <ul class="nav d-flex justify-content-between">
+                            <li class="nav-list"><a href="./about.html">О нас</a></li>
+                            <li class="nav-list"><a href="./tea.html">О чае</a></li>
+                            <li class="nav-list"><a href="./factories.html">Фабрики</a></li>
+                            <li class="nav-list"><a href="./payment.html">Оплата</a></li>
+                            <li class="nav-list"><a href="./delivery.html">Доставка</a></li>
+                            <li class="nav-list position-relative">
+                                <img src="assets/img/png/leaf-top2.png" alt="" class="leaf position-absolute">
+                                <a href="./sale.html">Акции</a></li>
+                            <li class="nav-list"><a href="./contact.html">Контакты</a></li>
+                        </ul>    
+                    </div>
+                </div>
+            </div>
+        </nav>
+        <div class="header-mob d-lg-none">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12 d-flex align-items-center position-relative">
+                        <div class="menu-btn">
+                            <svg width="27" height="22" viewBox="0 0 27 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M19.5746 2.3001C19.5746 1.49931 18.9903 0.850098 18.2696 0.850098H1.30461C0.583902 0.850098 -0.000391006 1.49931 -0.000391006 2.3001C-0.000391006 3.10088 0.583902 3.7501 1.30461 3.7501H18.2696C18.9903 3.7501 19.5746 3.10083 19.5746 2.3001ZM1.30461 9.5501H24.7946C25.5153 9.5501 26.0996 10.1994 26.0996 11.0001C26.0996 11.8009 25.5153 12.4501 24.7946 12.4501H1.30461C0.583902 12.4501 -0.000391006 11.8009 -0.000391006 11.0001C-0.000391006 10.1994 0.583902 9.5501 1.30461 9.5501ZM1.30461 18.2501H13.0496C13.7703 18.2501 14.3546 18.8993 14.3546 19.7001C14.3546 20.5008 13.7703 21.1501 13.0496 21.1501H1.30461C0.583902 21.1501 -0.000391006 20.5008 -0.000391006 19.7001C-0.000391006 18.8993 0.583902 18.2501 1.30461 18.2501Z" fill="#026309"/>
+                            </svg>
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M18.4049 19.3332C18.2829 19.3333 18.1621 19.3092 18.0494 19.2624C17.9367 19.2156 17.8343 19.1471 17.7482 19.0606L0.937355 2.25197C0.762994 2.07761 0.665039 1.84112 0.665039 1.59454C0.665039 1.34796 0.762994 1.11147 0.937355 0.937111C1.11172 0.76275 1.3482 0.664795 1.59478 0.664795C1.84137 0.664795 2.07785 0.76275 2.25221 0.937111L19.0631 17.748C19.1926 17.878 19.2808 18.0434 19.3164 18.2234C19.352 18.4035 19.3336 18.59 19.2633 18.7596C19.1931 18.9291 19.0742 19.0741 18.9217 19.1762C18.7692 19.2783 18.5899 19.3329 18.4064 19.3332H18.4049Z" fill="#009F07"/>
+                                <path d="M1.5952 19.3332C1.41155 19.3332 1.23203 19.2788 1.0793 19.1768C0.926563 19.0748 0.80747 18.9299 0.73705 18.7603C0.666631 18.5906 0.648044 18.404 0.683635 18.2238C0.719227 18.0436 0.807402 17.8781 0.937027 17.748L17.7479 0.937111C17.9222 0.76275 18.1587 0.664795 18.4053 0.664795C18.6519 0.664795 18.8884 0.76275 19.0627 0.937111C19.2371 1.11147 19.3351 1.34796 19.3351 1.59454C19.3351 1.84112 19.2371 2.07761 19.0627 2.25197L2.25188 19.0628C2.16559 19.1489 2.06317 19.2171 1.95048 19.2635C1.8378 19.3099 1.71706 19.3336 1.5952 19.3332Z" fill="#009F07"/>
+                            </svg>
+                        </div>
+                        <div class="header-search">
+                            <div class="search">
+                                <input type="text" class="search__inp" placeholder="Поиск">
+                                <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M16.3434 15.6023L12.0834 11.4104C13.199 10.1983 13.8844 8.59541 13.8844 6.83156C13.8839 3.05835 10.776 0 6.94194 0C3.10788 0 0 3.05835 0 6.83156C0 10.6048 3.10788 13.6631 6.94194 13.6631C8.59851 13.6631 10.1179 13.0901 11.3113 12.1375L15.5879 16.346C15.7963 16.5513 16.1346 16.5513 16.343 16.346C16.3925 16.2976 16.4319 16.2398 16.4588 16.176C16.4857 16.1121 16.4996 16.0436 16.4997 15.9743C16.4997 15.905 16.4859 15.8364 16.4591 15.7725C16.4323 15.7087 16.3929 15.6508 16.3434 15.6023ZM6.94194 12.612C3.69791 12.612 1.06811 10.024 1.06811 6.83156C1.06811 3.63908 3.69791 1.05108 6.94194 1.05108C10.186 1.05108 12.8158 3.63908 12.8158 6.83156C12.8158 10.024 10.186 12.612 6.94194 12.612Z" fill="#7A7A83"/>
+                                </svg>
+                            </div>
+                        </div>
+
+                        <div class="menu">
+                            <ul class="nav d-flex justify-content-between flex-wrap align-items-center">
+                                <li class="nav-list"><a href="./about.html">О нас</a></li>
+                                <li class="nav-list"><a href="./tea.html">О чае</a></li>
+                                <li class="nav-list"><a href="./factories.html">Фабрики</a></li>
+                                <li class="nav-list"><a href="./payment.html">Оплата</a></li>
+                                <li class="nav-list"><a href="./delivery.html">Доставка</a></li>
+                                <li class="nav-list"><a href="./sale.html">Акции</a></li>
+                                <li class="nav-list"><a href="./contact.html">Контакты</a></li>
+                            </ul>  
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <main class="main">
+        <div class="products">
+            <div class="d- d-xl-block">
+                <img src="assets/img/png/leaf-left.png" alt="" class="leaf">
+                <img src="assets/img/png/leaf-right.png" alt="" class="leaf">
+                <img src="assets/img/png/leaf-left2.png" alt="" class="leaf">
+                <img src="assets/img/png/leaf-right2.png" alt="" class="leaf">
+            </div>
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        <div class="swiper swiper-products">
+                            <div class="swiper-wrapper">
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- slide -->
+                                <div class="swiper-slide">
+                                    <div class="products-card card">
+                                       <a href="./product-card.html"></a>
+                                        <p class="products-card__title card_title">Название чая</p>
+                                        <div class="card-item">
+                                            <div class="photo">
+                                                <img src="assets/img/png/p1.png" alt="" class="products-card__img">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-controls d-flex align-items-center justify-content-between">
+                            <div class="controls-count d-flex align-items-start align-items-sm-center  flex-column flex-sm-row">
+                                <span>Страница</span>
+                                <div class="d-flex align-items-center mt-2 mt-sm-0">
+                                    <div class="count-select">
+                                        <div class="select-head">
+                                            <span class="active">1</span>
+                                            <svg width="10" height="7" viewBox="0 0 10 7" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M8.71655 0.264994C8.85799 0.116346 9.04899 0.032959 9.24803 0.032959C9.44708 0.032959 9.63807 0.116346 9.77951 0.264994C9.84935 0.337988 9.9048 0.424996 9.94265 0.520954C9.98051 0.616911 10 0.719901 10 0.82393C10 0.92796 9.98051 1.03095 9.94265 1.12691C9.9048 1.22286 9.84935 1.30987 9.77951 1.38287L5.53202 5.80129C5.39026 5.94973 5.19913 6.03296 5 6.03296C4.80087 6.03296 4.60974 5.94973 4.46798 5.80129L0.220486 1.38287C0.150654 1.30987 0.0951987 1.22286 0.057346 1.12691C0.0194934 1.03095 0 0.92796 0 0.82393C0 0.719901 0.0194934 0.616911 0.057346 0.520954C0.0951987 0.424996 0.150654 0.337988 0.220486 0.264994C0.361925 0.116346 0.552923 0.032959 0.751966 0.032959C0.951008 0.032959 1.14201 0.116346 1.28345 0.264994L5.00163 3.88856L8.71655 0.264994Z" fill="#333333"/>
+                                            </svg>
+                                        </div>
+                                        <ul class="select-body">
+                                            <li>1</li>
+                                            <li>2</li>
+                                            <li>3</li>
+                                            <li>4</li>
+                                            <li>5</li>
+                                            <li>6</li>
+                                            <li>7</li>
+                                            <li>8</li>
+                                            <li>9</li>
+                                            <li>10</li>
+                                        </ul>
+                                    </div>
+                                    <span>из <span class="all-count">10</span></span>
+                                </div>
+                            </div>
+
+                            <div class="swiper-btn">
+                                <div class="swiper-button-prev btn products-prev">
+                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M0.292893 6.82585C-0.0976309 7.21638 -0.097631 7.84954 0.292893 8.24007L6.65685 14.604C7.04738 14.9946 7.68054 14.9946 8.07107 14.604C8.46159 14.2135 8.46159 13.5803 8.07107 13.1898L2.41421 7.53296L8.07107 1.87611C8.46159 1.48558 8.46159 0.852417 8.07107 0.461892C7.68054 0.0713678 7.04738 0.0713677 6.65686 0.461892L0.292893 6.82585ZM2 6.53296L1 6.53296L1 8.53296L2 8.53296L2 6.53296Z" fill="white"/>
+                                    </svg>
+                                </div>
+                                <div class="swiper-button-next btn products-next">
+                                    <svg width="9" height="15" viewBox="0 0 9 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.70711 8.24007C9.09763 7.84954 9.09763 7.21638 8.70711 6.82585L2.34315 0.461891C1.95262 0.0713663 1.31946 0.0713663 0.928933 0.461891C0.538408 0.852415 0.538408 1.48558 0.928933 1.8761L6.58579 7.53296L0.928932 13.1898C0.538407 13.5803 0.538407 14.2135 0.928932 14.604C1.31946 14.9946 1.95262 14.9946 2.34315 14.604L8.70711 8.24007ZM7 8.53296L8 8.53296L8 6.53296L7 6.53296L7 8.53296Z" fill="white"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <img src="assets/img/png/footer-bg.png" alt="" class="footer-bg d-none d-sm-block">
+        <img src="assets/img/png/footer-bg2.png" alt="" class="footer-bg d-sm-none">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 d-flex justify-content-between ">
+                    <div class="footer-item">
+                        <h6 class="footer__title">Компания</h6>
+                        <ul class="footer-nav">
+                            <li class=""><a href="#">О нас</a></li>
+                            <li class=""><a href="#">О чае</a></li>
+                            <li class=""><a href="#">Фабрики</a></li>
+                            <li class=""><a href="#">Акции</a></li>
+                            <li class=""><a href="#">Контакты</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-item">
+                        <h6 class="footer__title">Информация</h6>
+                        <ul class="footer-nav">
+                            <li class=""><a href="#">Оплата</a></li>
+                            <li class=""><a href="#">Доставка</a></li>
+                        </ul>
+                        <div class="mt-4 d-md-none">
+                            <h6 class="footer__title">Контакты</h6>
+                           <div class="d-flex flex-column">
+                                <a href="tel:+75660000000" class="footer__link">
+                                    <img src="assets/img/svg/call.svg" alt="">
+                                    <span>+7 566 000 00 00</span>
+                                </a>
+                                <a href="#" class="footer__link">
+                                    <img src="assets/img/svg/loc.svg" alt="">
+                                    <span>г.Москва, ул. Мельникова 12</span>
+                                </a>
+                           </div>
+                        </div>
+                    </div>
+                    <div class="footer-item d-none d-md-block">
+                        <h6 class="footer__title">Будьте всегда в курсе!</h6>
+                       <form action="#" class="footer-form">
+                            <div class="form-box">
+                                <input type="email" class="form__inp" placeholder="Ваш e-mail" required>
+                                <button class="form__btn">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.5785 0.504463C15.3578 0.283033 15.0807 0.126123 14.7773 0.0506877C14.4739 -0.0247475 14.1557 -0.01584 13.857 0.0764478L1.21375 3.96704C0.885459 4.06817 0.594964 4.26528 0.379687 4.53297C0.164411 4.80066 0.0342138 5.12668 0.00586757 5.46903C-0.0224787 5.81137 0.0523244 6.15437 0.220641 6.45382C0.388958 6.75328 0.643078 6.99548 0.950267 7.14923L5.50055 9.44493L8.52216 6.42358C8.67296 6.27278 8.87748 6.18806 9.09075 6.18806C9.30401 6.18806 9.50853 6.27278 9.65933 6.42358C9.81013 6.57438 9.89485 6.77891 9.89485 6.99217C9.89485 7.20543 9.81013 7.40996 9.65933 7.56076L6.65188 10.568L8.9337 15.1323C9.07553 15.4183 9.29455 15.659 9.56601 15.827C9.83747 15.9951 10.1505 16.0839 10.4698 16.0833C10.5177 16.0833 10.5664 16.081 10.6151 16.077C10.9576 16.0497 11.2839 15.9198 11.5516 15.7043C11.8193 15.4889 12.0159 15.1979 12.1159 14.8691L16.0065 2.22593C16.0987 1.92722 16.1076 1.60899 16.0322 1.3056C15.9567 1.00221 15.7999 0.725193 15.5785 0.504463Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                       </form>
+                    </div>
+                    <div class="footer-item d-none d-md-block">
+                        <h6 class="footer__title">Контакты</h6>
+                       <div class="d-flex flex-column">
+                            <a href="tel:+75660000000" class="footer__link">
+                                <img src="assets/img/svg/call.svg" alt="">
+                                <span>+7 566 000 00 00</span>
+                            </a>
+                            <a href="#" class="footer__link">
+                                <img src="assets/img/svg/loc.svg" alt="">
+                                <span>г.Москва, ул. Мельникова 12</span>
+                            </a>
+                       </div>
+                    </div>
+                </div>
+                <div class="col-12">
+                    <div class="mt-4 d-md-none position-relative z-1">
+                        <h6 class="footer__title">Будьте всегда в курсе!</h6>
+                       <form action="#" class="footer-form">
+                            <div class="form-box">
+                                <input type="email" class="form__inp" placeholder="Ваш e-mail" required>
+                                <button class="form__btn">
+                                    <svg width="17" height="17" viewBox="0 0 17 17" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15.5785 0.504463C15.3578 0.283033 15.0807 0.126123 14.7773 0.0506877C14.4739 -0.0247475 14.1557 -0.01584 13.857 0.0764478L1.21375 3.96704C0.885459 4.06817 0.594964 4.26528 0.379687 4.53297C0.164411 4.80066 0.0342138 5.12668 0.00586757 5.46903C-0.0224787 5.81137 0.0523244 6.15437 0.220641 6.45382C0.388958 6.75328 0.643078 6.99548 0.950267 7.14923L5.50055 9.44493L8.52216 6.42358C8.67296 6.27278 8.87748 6.18806 9.09075 6.18806C9.30401 6.18806 9.50853 6.27278 9.65933 6.42358C9.81013 6.57438 9.89485 6.77891 9.89485 6.99217C9.89485 7.20543 9.81013 7.40996 9.65933 7.56076L6.65188 10.568L8.9337 15.1323C9.07553 15.4183 9.29455 15.659 9.56601 15.827C9.83747 15.9951 10.1505 16.0839 10.4698 16.0833C10.5177 16.0833 10.5664 16.081 10.6151 16.077C10.9576 16.0497 11.2839 15.9198 11.5516 15.7043C11.8193 15.4889 12.0159 15.1979 12.1159 14.8691L16.0065 2.22593C16.0987 1.92722 16.1076 1.60899 16.0322 1.3056C15.9567 1.00221 15.7999 0.725193 15.5785 0.504463Z" fill="white"/>
+                                    </svg>
+                                </button>
+                            </div>
+                       </form>
+                    </div>
+                    <div class="footer-bottom">
+                        <span>2024 Все права защищены</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="popUp popUp-login d-none">
+        <div class="popUp-content position-relative">
+            <span class="popUp__close">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M18 6L6 18" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                    <path d="M6 6L18 18" stroke="#000" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+                </svg>
+            </span>
+            <div class="login-in">
+                <h3 class="popUp__title text-center">Вход</h3>
+                <form class="form popUp-login-form">
+                    <div class="">
+                        <div class="input-box">
+                            <label for="login-in-email">Email или номер телефона*</label>
+                            <input type="text" id="login-in-email">
+                            <small></small>
+                        </div>
+                        <div class="input-box ">
+                            <label for="login-in-pass">Пароль</label>
+                            <input type="password" id="login-in-pass">
+                            <small></small>
+                            <div class="show_pass">
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.21848 6.09714C2.08795 5.79257 1.73522 5.65148 1.43064 5.78201C1.12606 5.91254 0.984972 6.26527 1.11551 6.56985L2.21848 6.09714ZM12.9896 11.6074L12.7699 11.0491V11.0491L12.9896 11.6074ZM7.51391 11.9346C7.69464 11.6569 7.61598 11.2852 7.33823 11.1045C7.06048 10.9238 6.68882 11.0024 6.50809 11.2802L7.51391 11.9346ZM5.33075 13.0896C5.15002 13.3673 5.22868 13.739 5.50643 13.9197C5.78418 14.1005 6.15584 14.0218 6.33657 13.7441L5.33075 13.0896ZM18.8851 6.56985C19.0157 6.26527 18.8746 5.91254 18.57 5.78201C18.2654 5.65148 17.9127 5.79257 17.7822 6.09714L18.8851 6.56985ZM15.8337 9.77419L15.423 9.33672V9.33672L15.8337 9.77419ZM16.6594 11.4485C16.8937 11.6828 17.2736 11.6828 17.5079 11.4485C17.7422 11.2141 17.7422 10.8342 17.5079 10.5999L16.6594 11.4485ZM9.40033 14.2502C9.40033 14.5815 9.66895 14.8502 10.0003 14.8502C10.3317 14.8502 10.6003 14.5815 10.6003 14.2502H9.40033ZM13.6641 13.7441C13.8448 14.0218 14.2165 14.1005 14.4942 13.9197C14.772 13.739 14.8506 13.3673 14.6699 13.0896L13.6641 13.7441ZM4.59126 10.1985C4.82557 9.96414 4.82557 9.58424 4.59126 9.34993C4.35694 9.11562 3.97704 9.11562 3.74273 9.34993L4.59126 10.1985ZM2.49273 10.5999C2.25841 10.8342 2.25841 11.2141 2.49273 11.4485C2.72704 11.6828 3.10694 11.6828 3.34126 11.4485L2.49273 10.5999ZM10.0003 11.5668C7.30455 11.5668 5.36939 10.2242 4.08583 8.84189C3.44424 8.15094 2.97388 7.4581 2.66434 6.93806C2.5099 6.67861 2.39643 6.46375 2.32246 6.31582C2.2855 6.2419 2.25847 6.18482 2.24119 6.14741C2.23255 6.1287 2.22636 6.11493 2.22258 6.10643C2.22069 6.10218 2.2194 6.09925 2.21872 6.09769C2.21838 6.09691 2.21819 6.09647 2.21815 6.09638C2.21813 6.09633 2.21815 6.09637 2.2182 6.0965C2.21823 6.09656 2.2183 6.09672 2.21831 6.09676C2.21839 6.09694 2.21848 6.09714 1.66699 6.3335C1.11551 6.56985 1.11561 6.5701 1.11573 6.57037C1.11578 6.57049 1.11591 6.57079 1.11601 6.57103C1.11622 6.57151 1.11647 6.57208 1.11675 6.57274C1.11732 6.57406 1.11805 6.57573 1.11893 6.57776C1.1207 6.5818 1.12309 6.58724 1.12611 6.59403C1.13214 6.60761 1.1407 6.62659 1.15179 6.65061C1.17398 6.69864 1.20636 6.76689 1.24915 6.85248C1.33469 7.02355 1.4621 7.26442 1.63319 7.55184C1.97468 8.12556 2.49391 8.89105 3.20648 9.65843C4.63126 11.1928 6.86277 12.7668 10.0003 12.7668V11.5668ZM12.7699 11.0491C11.9585 11.3685 11.0384 11.5668 10.0003 11.5668V12.7668C11.1956 12.7668 12.2644 12.5377 13.2094 12.1657L12.7699 11.0491ZM6.50809 11.2802L5.33075 13.0896L6.33657 13.7441L7.51391 11.9346L6.50809 11.2802ZM18.3337 6.3335C17.7822 6.09714 17.7822 6.09702 17.7823 6.09691C17.7823 6.09688 17.7823 6.09678 17.7824 6.09672C17.7824 6.0966 17.7824 6.09652 17.7825 6.09646C17.7825 6.09634 17.7825 6.09633 17.7825 6.09643C17.7824 6.09662 17.7821 6.09726 17.7817 6.09831C17.7807 6.10043 17.779 6.10426 17.7766 6.10973C17.7717 6.12067 17.7638 6.13818 17.7528 6.16176C17.7308 6.20895 17.6965 6.28037 17.6498 6.37208C17.5562 6.55563 17.4128 6.81962 17.2177 7.13272C16.8265 7.76064 16.233 8.57649 15.423 9.33672L16.2443 10.2117C17.1498 9.36171 17.8063 8.45721 18.2362 7.76733C18.4517 7.42152 18.6117 7.12726 18.7188 6.91727C18.7724 6.8122 18.8128 6.72804 18.8404 6.66883C18.8542 6.63922 18.8648 6.61583 18.8723 6.59917C18.876 6.59084 18.8789 6.58419 18.8811 6.57928C18.8821 6.57682 18.883 6.57481 18.8837 6.57323C18.884 6.57245 18.8843 6.57177 18.8846 6.5712C18.8847 6.57092 18.8848 6.57067 18.8849 6.57044C18.8849 6.57033 18.885 6.57018 18.885 6.57012C18.8851 6.56998 18.8851 6.56985 18.3337 6.3335ZM15.423 9.33672C14.7054 10.0103 13.8246 10.634 12.7699 11.0491L13.2094 12.1657C14.4339 11.6838 15.4405 10.9661 16.2443 10.2117L15.423 9.33672ZM15.4094 10.1985L16.6594 11.4485L17.5079 10.5999L16.2579 9.34993L15.4094 10.1985ZM9.40033 12.1668V14.2502H10.6003V12.1668H9.40033ZM12.4867 11.9346L13.6641 13.7441L14.6699 13.0896L13.4926 11.2802L12.4867 11.9346ZM3.74273 9.34993L2.49273 10.5999L3.34126 11.4485L4.59126 10.1985L3.74273 9.34993Z" fill="#009F07"/>
+                                </svg>
+                                <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="#009F07" stroke-width="1.5"/>
+                                    <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#009F07" stroke-width="1.5"/>
+                                </svg>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button forgot-pass">Забыли пароль?</div>
+                    <button type="button" class="submit__btn">Войти</button>
+                    <div class="form-sub text-center">Еще нет аккаунта? <span class="regis">Зарегистрироваться</span></div>
+                </form>
+            </div>
+            <div class="login-regis d-none">
+                <h3 class="popUp__title text-center">Регистрация</h3>
+               <div class="regis">
+                <form class="form popUp-login-form">
+                    <div class="input-box">
+                        <label for="login-regis-name">ФИО<span>*</span></label>
+                        <input type="text" id="login-regis-name">
+                        <small></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="login-regis-email">Email<span>*</span></label>
+                        <input type="text" id="login-regis-email">
+                        <small></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="login-regis-phone">Номер телефона<span>*</span></label>
+                        <input type="text" id="login-regis-phone">
+                        <small></small>
+                    </div>
+                    <div class="input-box">
+                        <label for="login-regis-pass">Придумайте пароль<span>*</span></label>
+                        <input type="password" id="login-regis-pass">
+                        <small></small>
+                        <div class="show_pass">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.21848 6.09714C2.08795 5.79257 1.73522 5.65148 1.43064 5.78201C1.12606 5.91254 0.984972 6.26527 1.11551 6.56985L2.21848 6.09714ZM12.9896 11.6074L12.7699 11.0491V11.0491L12.9896 11.6074ZM7.51391 11.9346C7.69464 11.6569 7.61598 11.2852 7.33823 11.1045C7.06048 10.9238 6.68882 11.0024 6.50809 11.2802L7.51391 11.9346ZM5.33075 13.0896C5.15002 13.3673 5.22868 13.739 5.50643 13.9197C5.78418 14.1005 6.15584 14.0218 6.33657 13.7441L5.33075 13.0896ZM18.8851 6.56985C19.0157 6.26527 18.8746 5.91254 18.57 5.78201C18.2654 5.65148 17.9127 5.79257 17.7822 6.09714L18.8851 6.56985ZM15.8337 9.77419L15.423 9.33672V9.33672L15.8337 9.77419ZM16.6594 11.4485C16.8937 11.6828 17.2736 11.6828 17.5079 11.4485C17.7422 11.2141 17.7422 10.8342 17.5079 10.5999L16.6594 11.4485ZM9.40033 14.2502C9.40033 14.5815 9.66895 14.8502 10.0003 14.8502C10.3317 14.8502 10.6003 14.5815 10.6003 14.2502H9.40033ZM13.6641 13.7441C13.8448 14.0218 14.2165 14.1005 14.4942 13.9197C14.772 13.739 14.8506 13.3673 14.6699 13.0896L13.6641 13.7441ZM4.59126 10.1985C4.82557 9.96414 4.82557 9.58424 4.59126 9.34993C4.35694 9.11562 3.97704 9.11562 3.74273 9.34993L4.59126 10.1985ZM2.49273 10.5999C2.25841 10.8342 2.25841 11.2141 2.49273 11.4485C2.72704 11.6828 3.10694 11.6828 3.34126 11.4485L2.49273 10.5999ZM10.0003 11.5668C7.30455 11.5668 5.36939 10.2242 4.08583 8.84189C3.44424 8.15094 2.97388 7.4581 2.66434 6.93806C2.5099 6.67861 2.39643 6.46375 2.32246 6.31582C2.2855 6.2419 2.25847 6.18482 2.24119 6.14741C2.23255 6.1287 2.22636 6.11493 2.22258 6.10643C2.22069 6.10218 2.2194 6.09925 2.21872 6.09769C2.21838 6.09691 2.21819 6.09647 2.21815 6.09638C2.21813 6.09633 2.21815 6.09637 2.2182 6.0965C2.21823 6.09656 2.2183 6.09672 2.21831 6.09676C2.21839 6.09694 2.21848 6.09714 1.66699 6.3335C1.11551 6.56985 1.11561 6.5701 1.11573 6.57037C1.11578 6.57049 1.11591 6.57079 1.11601 6.57103C1.11622 6.57151 1.11647 6.57208 1.11675 6.57274C1.11732 6.57406 1.11805 6.57573 1.11893 6.57776C1.1207 6.5818 1.12309 6.58724 1.12611 6.59403C1.13214 6.60761 1.1407 6.62659 1.15179 6.65061C1.17398 6.69864 1.20636 6.76689 1.24915 6.85248C1.33469 7.02355 1.4621 7.26442 1.63319 7.55184C1.97468 8.12556 2.49391 8.89105 3.20648 9.65843C4.63126 11.1928 6.86277 12.7668 10.0003 12.7668V11.5668ZM12.7699 11.0491C11.9585 11.3685 11.0384 11.5668 10.0003 11.5668V12.7668C11.1956 12.7668 12.2644 12.5377 13.2094 12.1657L12.7699 11.0491ZM6.50809 11.2802L5.33075 13.0896L6.33657 13.7441L7.51391 11.9346L6.50809 11.2802ZM18.3337 6.3335C17.7822 6.09714 17.7822 6.09702 17.7823 6.09691C17.7823 6.09688 17.7823 6.09678 17.7824 6.09672C17.7824 6.0966 17.7824 6.09652 17.7825 6.09646C17.7825 6.09634 17.7825 6.09633 17.7825 6.09643C17.7824 6.09662 17.7821 6.09726 17.7817 6.09831C17.7807 6.10043 17.779 6.10426 17.7766 6.10973C17.7717 6.12067 17.7638 6.13818 17.7528 6.16176C17.7308 6.20895 17.6965 6.28037 17.6498 6.37208C17.5562 6.55563 17.4128 6.81962 17.2177 7.13272C16.8265 7.76064 16.233 8.57649 15.423 9.33672L16.2443 10.2117C17.1498 9.36171 17.8063 8.45721 18.2362 7.76733C18.4517 7.42152 18.6117 7.12726 18.7188 6.91727C18.7724 6.8122 18.8128 6.72804 18.8404 6.66883C18.8542 6.63922 18.8648 6.61583 18.8723 6.59917C18.876 6.59084 18.8789 6.58419 18.8811 6.57928C18.8821 6.57682 18.883 6.57481 18.8837 6.57323C18.884 6.57245 18.8843 6.57177 18.8846 6.5712C18.8847 6.57092 18.8848 6.57067 18.8849 6.57044C18.8849 6.57033 18.885 6.57018 18.885 6.57012C18.8851 6.56998 18.8851 6.56985 18.3337 6.3335ZM15.423 9.33672C14.7054 10.0103 13.8246 10.634 12.7699 11.0491L13.2094 12.1657C14.4339 11.6838 15.4405 10.9661 16.2443 10.2117L15.423 9.33672ZM15.4094 10.1985L16.6594 11.4485L17.5079 10.5999L16.2579 9.34993L15.4094 10.1985ZM9.40033 12.1668V14.2502H10.6003V12.1668H9.40033ZM12.4867 11.9346L13.6641 13.7441L14.6699 13.0896L13.4926 11.2802L12.4867 11.9346ZM3.74273 9.34993L2.49273 10.5999L3.34126 11.4485L4.59126 10.1985L3.74273 9.34993Z" fill="#009F07"/>
+                            </svg>
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="#009F07" stroke-width="1.5"/>
+                                <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#009F07" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="input-box">
+                        <label for="return-pass">Повторите пароль<span>*</span></label>
+                        <input type="password" id="return-pass">
+                        <small></small>
+                        <div class="show_pass">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.21848 6.09714C2.08795 5.79257 1.73522 5.65148 1.43064 5.78201C1.12606 5.91254 0.984972 6.26527 1.11551 6.56985L2.21848 6.09714ZM12.9896 11.6074L12.7699 11.0491V11.0491L12.9896 11.6074ZM7.51391 11.9346C7.69464 11.6569 7.61598 11.2852 7.33823 11.1045C7.06048 10.9238 6.68882 11.0024 6.50809 11.2802L7.51391 11.9346ZM5.33075 13.0896C5.15002 13.3673 5.22868 13.739 5.50643 13.9197C5.78418 14.1005 6.15584 14.0218 6.33657 13.7441L5.33075 13.0896ZM18.8851 6.56985C19.0157 6.26527 18.8746 5.91254 18.57 5.78201C18.2654 5.65148 17.9127 5.79257 17.7822 6.09714L18.8851 6.56985ZM15.8337 9.77419L15.423 9.33672V9.33672L15.8337 9.77419ZM16.6594 11.4485C16.8937 11.6828 17.2736 11.6828 17.5079 11.4485C17.7422 11.2141 17.7422 10.8342 17.5079 10.5999L16.6594 11.4485ZM9.40033 14.2502C9.40033 14.5815 9.66895 14.8502 10.0003 14.8502C10.3317 14.8502 10.6003 14.5815 10.6003 14.2502H9.40033ZM13.6641 13.7441C13.8448 14.0218 14.2165 14.1005 14.4942 13.9197C14.772 13.739 14.8506 13.3673 14.6699 13.0896L13.6641 13.7441ZM4.59126 10.1985C4.82557 9.96414 4.82557 9.58424 4.59126 9.34993C4.35694 9.11562 3.97704 9.11562 3.74273 9.34993L4.59126 10.1985ZM2.49273 10.5999C2.25841 10.8342 2.25841 11.2141 2.49273 11.4485C2.72704 11.6828 3.10694 11.6828 3.34126 11.4485L2.49273 10.5999ZM10.0003 11.5668C7.30455 11.5668 5.36939 10.2242 4.08583 8.84189C3.44424 8.15094 2.97388 7.4581 2.66434 6.93806C2.5099 6.67861 2.39643 6.46375 2.32246 6.31582C2.2855 6.2419 2.25847 6.18482 2.24119 6.14741C2.23255 6.1287 2.22636 6.11493 2.22258 6.10643C2.22069 6.10218 2.2194 6.09925 2.21872 6.09769C2.21838 6.09691 2.21819 6.09647 2.21815 6.09638C2.21813 6.09633 2.21815 6.09637 2.2182 6.0965C2.21823 6.09656 2.2183 6.09672 2.21831 6.09676C2.21839 6.09694 2.21848 6.09714 1.66699 6.3335C1.11551 6.56985 1.11561 6.5701 1.11573 6.57037C1.11578 6.57049 1.11591 6.57079 1.11601 6.57103C1.11622 6.57151 1.11647 6.57208 1.11675 6.57274C1.11732 6.57406 1.11805 6.57573 1.11893 6.57776C1.1207 6.5818 1.12309 6.58724 1.12611 6.59403C1.13214 6.60761 1.1407 6.62659 1.15179 6.65061C1.17398 6.69864 1.20636 6.76689 1.24915 6.85248C1.33469 7.02355 1.4621 7.26442 1.63319 7.55184C1.97468 8.12556 2.49391 8.89105 3.20648 9.65843C4.63126 11.1928 6.86277 12.7668 10.0003 12.7668V11.5668ZM12.7699 11.0491C11.9585 11.3685 11.0384 11.5668 10.0003 11.5668V12.7668C11.1956 12.7668 12.2644 12.5377 13.2094 12.1657L12.7699 11.0491ZM6.50809 11.2802L5.33075 13.0896L6.33657 13.7441L7.51391 11.9346L6.50809 11.2802ZM18.3337 6.3335C17.7822 6.09714 17.7822 6.09702 17.7823 6.09691C17.7823 6.09688 17.7823 6.09678 17.7824 6.09672C17.7824 6.0966 17.7824 6.09652 17.7825 6.09646C17.7825 6.09634 17.7825 6.09633 17.7825 6.09643C17.7824 6.09662 17.7821 6.09726 17.7817 6.09831C17.7807 6.10043 17.779 6.10426 17.7766 6.10973C17.7717 6.12067 17.7638 6.13818 17.7528 6.16176C17.7308 6.20895 17.6965 6.28037 17.6498 6.37208C17.5562 6.55563 17.4128 6.81962 17.2177 7.13272C16.8265 7.76064 16.233 8.57649 15.423 9.33672L16.2443 10.2117C17.1498 9.36171 17.8063 8.45721 18.2362 7.76733C18.4517 7.42152 18.6117 7.12726 18.7188 6.91727C18.7724 6.8122 18.8128 6.72804 18.8404 6.66883C18.8542 6.63922 18.8648 6.61583 18.8723 6.59917C18.876 6.59084 18.8789 6.58419 18.8811 6.57928C18.8821 6.57682 18.883 6.57481 18.8837 6.57323C18.884 6.57245 18.8843 6.57177 18.8846 6.5712C18.8847 6.57092 18.8848 6.57067 18.8849 6.57044C18.8849 6.57033 18.885 6.57018 18.885 6.57012C18.8851 6.56998 18.8851 6.56985 18.3337 6.3335ZM15.423 9.33672C14.7054 10.0103 13.8246 10.634 12.7699 11.0491L13.2094 12.1657C14.4339 11.6838 15.4405 10.9661 16.2443 10.2117L15.423 9.33672ZM15.4094 10.1985L16.6594 11.4485L17.5079 10.5999L16.2579 9.34993L15.4094 10.1985ZM9.40033 12.1668V14.2502H10.6003V12.1668H9.40033ZM12.4867 11.9346L13.6641 13.7441L14.6699 13.0896L13.4926 11.2802L12.4867 11.9346ZM3.74273 9.34993L2.49273 10.5999L3.34126 11.4485L4.59126 10.1985L3.74273 9.34993Z" fill="#009F07"/>
+                            </svg>
+                            <svg width="20px" height="20px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M3.27489 15.2957C2.42496 14.1915 2 13.6394 2 12C2 10.3606 2.42496 9.80853 3.27489 8.70433C4.97196 6.49956 7.81811 4 12 4C16.1819 4 19.028 6.49956 20.7251 8.70433C21.575 9.80853 22 10.3606 22 12C22 13.6394 21.575 14.1915 20.7251 15.2957C19.028 17.5004 16.1819 20 12 20C7.81811 20 4.97196 17.5004 3.27489 15.2957Z" stroke="#009F07" stroke-width="1.5"/>
+                                <path d="M15 12C15 13.6569 13.6569 15 12 15C10.3431 15 9 13.6569 9 12C9 10.3431 10.3431 9 12 9C13.6569 9 15 10.3431 15 12Z" stroke="#009F07" stroke-width="1.5"/>
+                            </svg>
+                        </div>
+                    </div>
+                    <button type="button" class="submit__btn">Регистрация</button>
+                    <div class="form-sub text-center">Уже есть аккаунт? <span class="login__btn">Войти</span></div>
+                </form>
+               </div>
+            </div>
+            <div class="login-send-code d-none">
+                <h3 class="popUp__title text-center">Вход</h3>
+                <form class="form popUp-login-form">
+                    <h6 class="form__title text-center">Мы выслали Вам письмо с кодом на <br> ваши e-mail</h6>
+                    <div class="input-code d-flex justify-content-center">
+                        <input type="text" placeholder="_" maxlength="1">
+                        <input type="text" placeholder="_" maxlength="1">
+                        <input type="text" placeholder="_" maxlength="1">
+                        <input type="text" placeholder="_" maxlength="1">
+                        <input type="text" placeholder="_" maxlength="1">
+                        <input type="text" placeholder="_" maxlength="1">
+                    </div>
+                    <div class="input-code-text text-center">
+                        <p class="code__text">Не пришло письмо?</p>
+                        <input value="Отправить ещё раз" type="button" class="send-again" />
+                    </div>
+                    <button type="button" class="submit__btn">Продолжить</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script src="assets/js/plugin/jquery.js"></script>
+    <script src="assets/js/plugin/mask.js"></script>
+    <script src="assets/js/plugin/swiper.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/popUp.js"></script>
+    <script src="assets/js/form.js"></script>
+    <script src="assets/js/product.js"></script>
+    
+    
+</body>
+</html>
