@@ -388,6 +388,7 @@ body {
           top: 0;
           left: 0;
           cursor: url('../img/png/cursor2.png'), auto;
+          z-index: 5;
         }
         &:hover {
           border-color: #009F07;
