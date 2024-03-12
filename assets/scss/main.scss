@@ -95,6 +95,12 @@ body {
         left: 30%;
       }
     }
+    &-logo {
+
+    }
+    &-middle-text {
+      margin-top: 25px;
+    }
     &-search {
       .search {
         width: 355px;
@@ -185,7 +191,7 @@ body {
         width: 120px;
         height: 48px;
         border-radius: 50px;
-        background: #009F07;
+        background: linear-gradient(#18C533, #059613);
         color: #fff;
         font-size: 18px;
         line-height: 18px;
@@ -216,7 +222,7 @@ body {
           font-size: 18px;
           line-height: 18px;
           &:hover {
-            background: #009F07;
+            background: linear-gradient(#18C533, #059613);
             color: #fff;
           }
         }
@@ -385,8 +391,8 @@ body {
         }
         &:hover {
           border-color: #009F07;
-          .photo {
-            background-image: url(../img/png/back-bg.png);
+          .products-card__img {
+            transform: scale(1.2);
           }
         }
       }
@@ -488,6 +494,22 @@ body {
     }
 
     .product {
+      .leaf {
+        position: absolute;
+        &:nth-child(1) {
+          top: -150px;
+          left: 0;
+        }
+        &:nth-child(2) {
+          top: 70px;
+          right: 0;
+          z-index: 2;
+        }
+        &:nth-child(3) {
+          bottom: -100px;
+          left: 0;
+        }
+      }
       &-head {
         margin-bottom: 60px;
         .back-page {
@@ -2076,6 +2098,52 @@ body {
     padding: 45px 0 35px;
     position: relative;
     margin-top: 20px;
+    .img {
+      img {
+        position: absolute;
+      }
+    }
+    .img1 {
+      img {
+        &:first-child {
+          bottom: 0;
+          left: 0;
+        }
+        &:last-child {
+          bottom: 0;
+          right: 0;
+        }
+      }
+    }
+    .img2 {
+      img {
+        &:first-child {
+          bottom: 0;
+          left: 50%;
+          transform: translateX(-50%);
+        }
+        &:last-child {
+          bottom: 0;
+          left: 49%;
+        }
+      }
+    }
+    .img3 {
+      img {
+        &:nth-child(1) {
+          top: -20px;
+          right: 0;
+        }
+        &:nth-child(2) {
+          right: 0;
+          bottom: 0;
+        }
+        &:nth-child(3) {
+          bottom: 0;
+          left: 0;
+        }
+      }
+    }
     &-item {
       position: relative;
       z-index: 2;

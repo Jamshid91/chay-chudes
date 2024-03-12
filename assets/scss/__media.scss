@@ -27,6 +27,24 @@
             padding-left: 30px;
           }
         }
+
+        .product {
+          .leaf {
+            position: absolute;
+            &:nth-child(1) {
+              top: -120px;
+              width: 50px;
+            }
+            &:nth-child(2) {
+              top: 70px;
+              width: 130px;
+            }
+            &:nth-child(3) {
+              bottom: -50px;
+              width: 50px;
+            }
+          }
+        }
       }
 }
 
@@ -257,6 +275,20 @@
           }
           &:last-child {
             display: none;
+          }
+        }
+      }
+
+      
+      .product {
+        .leaf {
+          &:nth-child(2) {
+            top: 70px;
+            width: 130px;
+          }
+          &:nth-child(4) {
+            bottom: 45%;
+            width: 250px;
           }
         }
       }
@@ -799,6 +831,18 @@
         .delivery {
           &__text {
             font-size: 16px;
+          }
+        }
+        .product {
+          .leaf {
+            &:nth-child(2) {
+              top: 50px;
+              width: 90px;
+            }
+            &:nth-child(4) {
+              bottom: 67%;
+              width: 150px;
+            }
           }
         }
       }
