@@ -377,6 +377,8 @@ input:hover, textarea:hover, select:hover, button:hover,
   font-weight: 500;
   font-size: 18px;
   line-height: 18px;
+  position: relative;
+  z-index: 2;
 }
 
 .header-nav .nav-list a:hover {
@@ -518,7 +520,7 @@ input:hover, textarea:hover, select:hover, button:hover,
 }
 
 .main .products .leaf:nth-child(2) {
-  top: 170px;
+  top: -20px;
   right: 0;
   z-index: 2;
 }
@@ -771,7 +773,7 @@ input:hover, textarea:hover, select:hover, button:hover,
 }
 
 .main .product .leaf:nth-child(2) {
-  top: 70px;
+  top: 90px;
   right: 0;
   z-index: 2;
 }
@@ -1485,16 +1487,20 @@ input:hover, textarea:hover, select:hover, button:hover,
 }
 
 .main .basket-card .product-remove span {
-  text-decoration: underline;
   font-size: 16px;
   line-height: 16px;
   font-weight: 300;
   margin-left: 6px;
+  border-bottom: 1px solid #2C2F35;
 }
 
 .main .basket-card .product-remove:hover {
   background: #E64D2C;
   color: #fff;
+}
+
+.main .basket-card .product-remove:hover span {
+  border-color: #fff;
 }
 
 .main .basket-card .product-remove:hover svg path {
@@ -2342,29 +2348,16 @@ input:hover, textarea:hover, select:hover, button:hover,
   padding-right: 0;
 }
 
-.main .about,
-.main .payment,
-.main .delivery {
-  margin-bottom: 50px;
-  position: relative;
-}
-
-.main .about .leaf,
-.main .payment .leaf,
-.main .delivery .leaf {
+.main .about .leaf {
   position: absolute;
 }
 
-.main .about .leaf:first-child,
-.main .payment .leaf:first-child,
-.main .delivery .leaf:first-child {
-  top: 75%;
+.main .about .leaf:first-child {
+  bottom: -15%;
   right: 0;
 }
 
-.main .about .leaf:last-child,
-.main .payment .leaf:last-child,
-.main .delivery .leaf:last-child {
+.main .about .leaf:last-child {
   top: 37%;
   left: 0;
 }
@@ -2590,20 +2583,36 @@ input:hover, textarea:hover, select:hover, button:hover,
           border-radius: 50px;
 }
 
-.main .payment .leaf:first-child,
 .main .delivery .leaf:first-child {
-  top: 0;
-  right: 0;
+  top: -25%;
+  right: -2%;
+  width: 180px;
 }
 
-.main .payment .leaf:last-child,
 .main .delivery .leaf:last-child {
   top: 75%;
   left: 0;
 }
 
-.main .payment__text,
 .main .delivery__text {
+  font-size: 18px;
+  line-height: 24px;
+  color: #5A6069;
+  margin-bottom: 24px;
+}
+
+.main .payment .leaf:first-child {
+  top: 10%;
+  right: -2%;
+  width: 180px;
+}
+
+.main .payment .leaf:last-child {
+  top: 75%;
+  left: 0;
+}
+
+.main .payment__text {
   font-size: 18px;
   line-height: 24px;
   color: #5A6069;
@@ -3583,6 +3592,9 @@ input:hover, textarea:hover, select:hover, button:hover,
   }
   .header-basket {
     margin: 0;
+  }
+  .header-middle-text {
+    margin-top: 5px;
   }
   .main .personal-area .tab-box .form-tab .form-item {
     width: 100%;
