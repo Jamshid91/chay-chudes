@@ -206,6 +206,16 @@
         &-middle-text {
           margin-top: 5px;
         }
+        .regis-btn {
+          .leaf-btn {
+            width: 180px;
+            top: -45%;
+            right: -35%;
+          }
+          .regis_btn {
+            justify-content: center;
+          }
+        }
     }
 
     .main {
@@ -305,31 +315,30 @@
     .header {
         &-logo {
             .logo {
-                width: 144px;
+                width: 142px;
             }
             .header-middle-text {
                 width: 150px;
             }
         }
-        .regis-btn,
-        .profile-btn {
-            width: 95px;
-            height: 45px;
-            background-image: url(../img/png/leaf-btn2.png);
-            margin-left: -15px;
-            padding-right: 0px;
-            padding-left: 5px;
-            .regis_btn,
-            .profile_btn {
-              width: 75px;
-              height: 30px;
-              font-size: 12px;
-              line-height: 14px;
-              svg {
-                width: 14px;
-              }
+        .regis-btn {
+          width: 80px;
+          height: 40px;
+          .leaf-btn {
+            width: 120px;
+            top: -30%;
+            right: -35%;
+          }
+          .regis_btn {
+            justify-content: center;
+            font-size: 12px;
+            line-height: 14px;
+            img {
+              width: 18px;
+              margin-right: 0;
             }
           }
+        }
           &-basket {
             .basket {
               width: 33px;
@@ -910,3 +919,7 @@
         }
       }
 }
+
+
+
+

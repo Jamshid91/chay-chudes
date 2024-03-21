@@ -236,7 +236,7 @@ input:hover, textarea:hover, select:hover, button:hover,
 
 .header-basket {
   font-family: 'Rubik', sans-serif;
-  margin-right: 24px;
+  margin-right: 30px;
 }
 
 .header-basket .basket {
@@ -296,58 +296,48 @@ input:hover, textarea:hover, select:hover, button:hover,
   color: #009F07;
 }
 
-.header .regis-btn,
-.header .profile-btn {
-  width: 150px;
-  height: 66px;
-  background-image: url(../img/png/leaf-btn.png);
-  background-repeat: no-repeat;
-  -webkit-background-size: 100% 100%;
-          background-size: 100% 100%;
+.header .regis-btn {
+  width: 120px;
+  height: 50px;
+  position: relative;
+}
+
+.header .regis-btn .leaf-btn {
+  position: absolute;
+  top: -55%;
+  right: -24%;
+}
+
+.header .regis-btn .regis_btn {
+  width: 100%;
+  height: 100%;
+  background: transparent;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: start;
+  -webkit-justify-content: start;
+      -ms-flex-pack: start;
+          justify-content: start;
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-  -webkit-justify-content: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-right: 7px;
-}
-
-.header .regis-btn .regis_btn,
-.header .regis-btn .profile_btn,
-.header .profile-btn .regis_btn,
-.header .profile-btn .profile_btn {
-  width: 120px;
-  height: 48px;
-  -webkit-border-radius: 50px;
-          border-radius: 50px;
-  background: -webkit-gradient(linear, left top, left bottom, from(#18C533), to(#059613));
-  background: -webkit-linear-gradient(#18C533, #059613);
-  background: -o-linear-gradient(#18C533, #059613);
-  background: linear-gradient(#18C533, #059613);
-  color: #fff;
+  padding-left: 5px;
   font-size: 18px;
-  line-height: 18px;
-  font-weight: 500;
+  line-height: 20px;
+  color: #fff;
+  position: relative;
+  z-index: 2;
 }
 
-.header .regis-btn .regis_btn svg,
-.header .regis-btn .profile_btn svg,
-.header .profile-btn .regis_btn svg,
-.header .profile-btn .profile_btn svg {
-  margin-right: 2px;
-  margin-top: -3px;
+.header .regis-btn .regis_btn .icon {
+  margin-right: 4px;
 }
 
-.header .regis-btn:hover,
-.header .profile-btn:hover {
-  opacity: 0.9;
+.header .regis-btn .regis_btn:hover {
+  opacity: 0.85;
 }
 
 .header-nav .nav-list a {
@@ -2348,20 +2338,6 @@ input:hover, textarea:hover, select:hover, button:hover,
   padding-right: 0;
 }
 
-.main .about .leaf {
-  position: absolute;
-}
-
-.main .about .leaf:first-child {
-  bottom: -15%;
-  right: 0;
-}
-
-.main .about .leaf:last-child {
-  top: 37%;
-  left: 0;
-}
-
 .main .about-banner__img,
 .main .payment-banner__img,
 .main .delivery-banner__img {
@@ -2464,6 +2440,20 @@ input:hover, textarea:hover, select:hover, button:hover,
   width: 100%;
   -o-object-fit: contain;
      object-fit: contain;
+}
+
+.main .about .leaf {
+  position: absolute;
+}
+
+.main .about .leaf:first-child {
+  bottom: -15%;
+  right: 0;
+}
+
+.main .about .leaf:last-child {
+  top: 37%;
+  left: 0;
 }
 
 .main .tea {
@@ -3596,6 +3586,17 @@ input:hover, textarea:hover, select:hover, button:hover,
   .header-middle-text {
     margin-top: 5px;
   }
+  .header .regis-btn .leaf-btn {
+    width: 180px;
+    top: -45%;
+    right: -35%;
+  }
+  .header .regis-btn .regis_btn {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .main .personal-area .tab-box .form-tab .form-item {
     width: 100%;
   }
@@ -3660,34 +3661,31 @@ input:hover, textarea:hover, select:hover, button:hover,
     padding: 0 12px;
   }
   .header-logo .logo {
-    width: 144px;
+    width: 142px;
   }
   .header-logo .header-middle-text {
     width: 150px;
   }
-  .header .regis-btn,
-  .header .profile-btn {
-    width: 95px;
-    height: 45px;
-    background-image: url(../img/png/leaf-btn2.png);
-    margin-left: -15px;
-    padding-right: 0px;
-    padding-left: 5px;
+  .header .regis-btn {
+    width: 80px;
+    height: 40px;
   }
-  .header .regis-btn .regis_btn,
-  .header .regis-btn .profile_btn,
-  .header .profile-btn .regis_btn,
-  .header .profile-btn .profile_btn {
-    width: 75px;
-    height: 30px;
+  .header .regis-btn .leaf-btn {
+    width: 120px;
+    top: -30%;
+    right: -35%;
+  }
+  .header .regis-btn .regis_btn {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
     font-size: 12px;
     line-height: 14px;
   }
-  .header .regis-btn .regis_btn svg,
-  .header .regis-btn .profile_btn svg,
-  .header .profile-btn .regis_btn svg,
-  .header .profile-btn .profile_btn svg {
-    width: 14px;
+  .header .regis-btn .regis_btn img {
+    width: 18px;
+    margin-right: 0;
   }
   .header-basket .basket {
     width: 33px;
