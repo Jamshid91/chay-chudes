@@ -92,9 +92,7 @@
         
       .order {
         margin-bottom: 20px;
-        &__title {
-          font-size: 24px;
-          line-height: 28px;
+        .title-text {
           margin-bottom: 25px;
         }
         &-form {
@@ -588,6 +586,10 @@
           }
 
           .basket {
+            &__title {
+              font-size: 24px;
+              line-height: 28px;
+            }
             &-card {
               .product-photo {
                 min-width: 61px;
@@ -657,10 +659,6 @@
 
           .personal-area {
             margin-top: 25px;
-            &__title {
-              font-size: 24px;
-              line-height: 28px;
-            }
             .tab-box {
               padding: 0;
               box-shadow: none;
@@ -728,32 +726,36 @@
           .about,
           .payment,
           .delivery {
+            .title-text {
+            margin: 28px 0 42px;
+            }
             &-banner {
               &__img {
                 height: 175px;
                 object-fit: cover;
               }
             }
-            &__title {
-              font-size: 24px;
-              line-height: 28px;
-              margin: 28px 0 42px;
-            }
-            &__text {
+          }     
+          
+          .title-text {
+            font-size: 24px;
+            line-height: 28px;
+          }
+          .title-subtext {
+            font-size: 16px;
+            line-height: 18px;
+          }
+          .info-list {
+            li {
               font-size: 16px;
-              line-height: 18px;
+              line-height: 24px;
             }
-            &-list {
-              li {
-                font-size: 16px;
-                line-height: 18px;
-              }
-            }
-            &-box {
-              margin-top: 0;
-              padding: 24px 20px;
-            }
-            &-item {
+          }
+          .info-box {
+            margin-top: 0;
+            margin-bottom: 30px;
+            padding: 24px 20px;
+            .info-item {
               width: 48%;
               &:first-child {
                 width: 100%;
@@ -768,12 +770,12 @@
             font-size: 24px;
             line-height: 28px;
           }
-          &__subtitle {
+          .title-text {
             font-size: 16px;
             line-height: 18px;
             font-weight: 500;
           }
-          &__text {
+          .title-subtext {
             font-size: 16px;
             line-height: 18px;
             &:nth-child(3) {
@@ -806,12 +808,15 @@
         }
 
         .sale {
-          &__title {
-            font-size: 20px;
-            line-height: 28px;
+          .title-text {
             margin-bottom: 40px;
           }
           &-item {
+            margin-bottom: 0;
+            &__img {
+              width: 100%;
+              margin-right: 0;
+            }
             &__title {
               font-size: 18px;
               line-height: 21px;
@@ -824,6 +829,9 @@
         }
 
         .contact {
+          .title-text {
+            margin-bottom: 40px;
+          }
           .leaf {
             &:first-child {
               top: 5%;
@@ -855,6 +863,17 @@
             &:nth-child(4) {
               bottom: 67%;
               width: 150px;
+            }
+          }
+        }
+
+        .not-found {
+          padding-bottom: 55px;
+          .leaf {
+            &:first-child {
+              top: 5%;
+              right: -2%;
+              width: 120px;
             }
           }
         }

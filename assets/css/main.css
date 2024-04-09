@@ -88,6 +88,13 @@ html {
 
 body {
   font-family: "Raleway",sans-serif;
+  font-feature-settings: "onum" off, "pnum" off, "lnum" on, "tnum" on;
+  -moz-font-feature-settings: "onum=0, pnum=0, lnum=1, tnum=1";
+  /* Firefox */
+  -webkit-font-feature-settings: "onum" off, "pnum" off, "lnum" on, "tnum" on;
+  /* WebKit */
+  -o-font-feature-settings: "onum" off, "pnum" off, "lnum" on, "tnum" on;
+  font-family: "Raleway",sans-serif;
   font-weight: 400;
   color: #63666C;
   overflow-x: hidden;
@@ -1593,11 +1600,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   margin-bottom: 50px;
 }
 
-.main .order__title {
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 500;
-  color: #1E1E1E;
+.main .order .title-text {
   margin-bottom: 46px;
 }
 
@@ -2338,43 +2341,20 @@ input:hover, textarea:hover, select:hover, button:hover,
   padding-right: 0;
 }
 
-.main .about-banner__img,
-.main .payment-banner__img,
-.main .delivery-banner__img {
-  width: 100%;
-  -o-object-fit: contain;
-     object-fit: contain;
-  -webkit-border-radius: 20px;
-          border-radius: 20px;
-}
-
-.main .about__title,
-.main .payment__title,
-.main .delivery__title {
+.main .title-text {
   font-size: 30px;
   line-height: 35px;
   font-weight: 500;
   color: #1E1E1E;
-  margin: 45px 0 42px;
 }
 
-.main .about__text,
-.main .payment__text,
-.main .delivery__text {
+.main .title-subtext {
   font-size: 18px;
   line-height: 21px;
   color: #5A6069;
 }
 
-.main .about-list,
-.main .payment-list,
-.main .delivery-list {
-  margin-top: 42px;
-}
-
-.main .about-list li,
-.main .payment-list li,
-.main .delivery-list li {
+.main .info-list li {
   font-size: 18px;
   line-height: 21px;
   color: #5A6069;
@@ -2383,15 +2363,11 @@ input:hover, textarea:hover, select:hover, button:hover,
   padding-left: 15px;
 }
 
-.main .about-list li:last-child,
-.main .payment-list li:last-child,
-.main .delivery-list li:last-child {
+.main .info-list li:last-child {
   margin-bottom: 0;
 }
 
-.main .about-list li::before,
-.main .payment-list li::before,
-.main .delivery-list li::before {
+.main .info-list li::before {
   content: '';
   position: absolute;
   top: 10px;
@@ -2405,9 +2381,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   margin-right: 10px;
 }
 
-.main .about-box,
-.main .payment-box,
-.main .delivery-box {
+.main .info-box {
   width: 100%;
   margin-top: 42px;
   -webkit-border-radius: 20px;
@@ -2418,20 +2392,38 @@ input:hover, textarea:hover, select:hover, button:hover,
   padding: 24px 34px;
 }
 
-.main .about-item,
-.main .payment-item,
-.main .delivery-item {
+.main .info-box .info-item {
   width: 30%;
 }
 
-.main .about-item__text,
-.main .payment-item__text,
-.main .delivery-item__text {
+.main .info-box .info-item__text {
   font-size: 16px;
   line-height: 18px;
   font-weight: 500;
   color: #1E1E1E;
   margin-top: 20px;
+}
+
+.main .about-banner__img,
+.main .payment-banner__img,
+.main .delivery-banner__img {
+  width: 100%;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -webkit-border-radius: 20px;
+          border-radius: 20px;
+}
+
+.main .about .title-text,
+.main .payment .title-text,
+.main .delivery .title-text {
+  margin: 45px 0 42px;
+}
+
+.main .about .info-list,
+.main .payment .info-list,
+.main .delivery .info-list {
+  margin-top: 42px;
 }
 
 .main .about-photo,
@@ -2474,10 +2466,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   color: #1E1E1E;
 }
 
-.main .tea__text {
-  font-size: 18px;
-  line-height: 21px;
-  color: #5A6069;
+.main .tea .title-subtext {
   margin-top: 24px;
 }
 
@@ -2550,18 +2539,11 @@ input:hover, textarea:hover, select:hover, button:hover,
   right: 0;
 }
 
-.main .factories__title {
-  font-size: 30px;
-  line-height: 36px;
-  font-weight: 500;
-  color: #1E1E1E;
+.main .factories .title-text {
   margin-bottom: 46px;
 }
 
-.main .factories__text {
-  font-size: 18px;
-  line-height: 21px;
-  color: #5A6069;
+.main .factories .title-subtext {
   margin-bottom: 24px;
 }
 
@@ -2584,10 +2566,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   left: 0;
 }
 
-.main .delivery__text {
-  font-size: 18px;
-  line-height: 24px;
-  color: #5A6069;
+.main .delivery .title-subtext {
   margin-bottom: 24px;
 }
 
@@ -2603,9 +2582,6 @@ input:hover, textarea:hover, select:hover, button:hover,
 }
 
 .main .payment__text {
-  font-size: 18px;
-  line-height: 24px;
-  color: #5A6069;
   margin-bottom: 24px;
 }
 
@@ -2623,24 +2599,21 @@ input:hover, textarea:hover, select:hover, button:hover,
   right: 0;
 }
 
-.main .sale__title {
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 500;
-  color: #1E1E1E;
+.main .sale .title-text {
   margin-bottom: 46px;
 }
 
 .main .sale-box {
   margin-right: 25px;
+  max-width: 1000px;
+}
+
+.main .sale-box .swiper, .main .sale-box .swiper-wrapper, .main .sale-box .swiper-slide {
+  width: 100% !important;
 }
 
 .main .sale-item {
   margin-bottom: 45px;
-}
-
-.main .sale-item:last-child {
-  margin-bottom: 0;
 }
 
 .main .sale-item__img {
@@ -2651,6 +2624,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   margin-right: 24px;
   -o-object-fit: contain;
      object-fit: contain;
+  border-radius: 20px;
 }
 
 .main .sale-item__title {
@@ -2669,11 +2643,6 @@ input:hover, textarea:hover, select:hover, button:hover,
 
 .main .sale-item__text span {
   color: #008809;
-}
-
-.main .sale .swiper-slide .sale-item__img {
-  min-width: 100%;
-  margin-right: 0 !important;
 }
 
 .main .sale-products {
@@ -2804,11 +2773,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   width: 80px;
 }
 
-.main .contact__title {
-  font-size: 30px;
-  line-height: 35px;
-  font-weight: 500;
-  color: #1E1E1E;
+.main .contact .title-text {
   margin-bottom: 46px;
 }
 
@@ -2922,6 +2887,67 @@ input:hover, textarea:hover, select:hover, button:hover,
 .main .contact-map iframe {
   width: 100%;
   height: 357px;
+}
+
+.main .not-found {
+  padding-bottom: 80px;
+}
+
+.main .not-found .leaf:first-child {
+  top: -15%;
+  right: -1%;
+  width: 200px;
+}
+
+.main .not-found .leaf:last-child {
+  top: 95%;
+  left: 0;
+  z-index: 10;
+  width: 80px;
+}
+
+.main .not-found-box {
+  min-height: 50vh;
+  padding: 50px 0;
+  font-size: 18px;
+  line-height: 21px;
+  font-weight: 500;
+}
+
+.main .not-found .not-found-title {
+  font-size: 80px;
+  line-height: 93px;
+  font-weight: 500;
+  color: #1E1E1E;
+}
+
+.main .not-found .not-found-text {
+  margin: 24px 0;
+}
+
+.main .not-found .not-found-link {
+  width: 310px;
+  height: 57px;
+  -webkit-border-radius: 50px;
+          border-radius: 50px;
+  background: #009F07;
+  color: #fff;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main .not-found .not-found-link:hover {
+  opacity: 0.9;
 }
 
 .footer {
@@ -3498,9 +3524,7 @@ input:hover, textarea:hover, select:hover, button:hover,
   .main .order {
     margin-bottom: 20px;
   }
-  .main .order__title {
-    font-size: 24px;
-    line-height: 28px;
+  .main .order .title-text {
     margin-bottom: 25px;
   }
   .main .order-form .check-address .address {
@@ -3887,6 +3911,10 @@ input:hover, textarea:hover, select:hover, button:hover,
   .main .product .description-tabs .tabs-btn:last-child {
     margin-right: 0;
   }
+  .main .basket__title {
+    font-size: 24px;
+    line-height: 28px;
+  }
   .main .basket-card .product-photo {
     min-width: 61px;
     height: 61px;
@@ -3958,10 +3986,6 @@ input:hover, textarea:hover, select:hover, button:hover,
   .main .personal-area {
     margin-top: 25px;
   }
-  .main .personal-area__title {
-    font-size: 24px;
-    line-height: 28px;
-  }
   .main .personal-area .tab-box {
     padding: 0;
     -webkit-box-shadow: none;
@@ -4017,6 +4041,11 @@ input:hover, textarea:hover, select:hover, button:hover,
     font-size: 12px;
     line-height: 14px;
   }
+  .main .about .title-text,
+  .main .payment .title-text,
+  .main .delivery .title-text {
+    margin: 28px 0 42px;
+  }
   .main .about-banner__img,
   .main .payment-banner__img,
   .main .delivery-banner__img {
@@ -4024,39 +4053,27 @@ input:hover, textarea:hover, select:hover, button:hover,
     -o-object-fit: cover;
        object-fit: cover;
   }
-  .main .about__title,
-  .main .payment__title,
-  .main .delivery__title {
+  .main .title-text {
     font-size: 24px;
     line-height: 28px;
-    margin: 28px 0 42px;
   }
-  .main .about__text,
-  .main .payment__text,
-  .main .delivery__text {
+  .main .title-subtext {
     font-size: 16px;
     line-height: 18px;
   }
-  .main .about-list li,
-  .main .payment-list li,
-  .main .delivery-list li {
+  .main .info-list li {
     font-size: 16px;
-    line-height: 18px;
+    line-height: 24px;
   }
-  .main .about-box,
-  .main .payment-box,
-  .main .delivery-box {
+  .main .info-box {
     margin-top: 0;
+    margin-bottom: 30px;
     padding: 24px 20px;
   }
-  .main .about-item,
-  .main .payment-item,
-  .main .delivery-item {
+  .main .info-box .info-item {
     width: 48%;
   }
-  .main .about-item:first-child,
-  .main .payment-item:first-child,
-  .main .delivery-item:first-child {
+  .main .info-box .info-item:first-child {
     width: 100%;
     margin-top: 10px;
   }
@@ -4067,16 +4084,16 @@ input:hover, textarea:hover, select:hover, button:hover,
     font-size: 24px;
     line-height: 28px;
   }
-  .main .tea__subtitle {
+  .main .tea .title-text {
     font-size: 16px;
     line-height: 18px;
     font-weight: 500;
   }
-  .main .tea__text {
+  .main .tea .title-subtext {
     font-size: 16px;
     line-height: 18px;
   }
-  .main .tea__text:nth-child(3) {
+  .main .tea .title-subtext:nth-child(3) {
     margin-top: 12px;
   }
   .main .tea .swiper-tea {
@@ -4096,10 +4113,15 @@ input:hover, textarea:hover, select:hover, button:hover,
     line-height: 18px;
     margin-bottom: 12px;
   }
-  .main .sale__title {
-    font-size: 20px;
-    line-height: 28px;
+  .main .sale .title-text {
     margin-bottom: 40px;
+  }
+  .main .sale-item {
+    margin-bottom: 0;
+  }
+  .main .sale-item__img {
+    width: 100%;
+    margin-right: 0;
   }
   .main .sale-item__title {
     font-size: 18px;
@@ -4108,6 +4130,9 @@ input:hover, textarea:hover, select:hover, button:hover,
   .main .sale-item__text {
     font-size: 16px;
     line-height: 18px;
+  }
+  .main .contact .title-text {
+    margin-bottom: 40px;
   }
   .main .contact .leaf:first-child {
     top: 5%;
@@ -4131,6 +4156,14 @@ input:hover, textarea:hover, select:hover, button:hover,
   .main .product .leaf:nth-child(4) {
     bottom: 67%;
     width: 150px;
+  }
+  .main .not-found {
+    padding-bottom: 55px;
+  }
+  .main .not-found .leaf:first-child {
+    top: 5%;
+    right: -2%;
+    width: 120px;
   }
   .footer {
     padding: 26px 0 19px;
