@@ -194,7 +194,7 @@
 
 @media (max-width: 991px) {
     .header {
-        padding-bottom: 24px;
+        padding-bottom: 70px;
         &-top {
             padding: 16px 0;
         }
@@ -213,6 +213,25 @@
           .regis_btn {
             justify-content: center;
           }
+        }
+        &-search {
+          width: 94%;
+          .search {
+            width: 100%;
+          }
+
+          .searching-results {
+            width: 100%;
+            top: 130%;
+            left: 0;
+          }
+        }
+
+        .toMove {
+          position: absolute;
+          top: 120%;
+          left: 0;
+          width: 100%;
         }
     }
 
@@ -470,6 +489,7 @@
 
 @media (max-width: 576px) {
     .header {
+      padding-bottom: 60px;
         .menu {
             .nav {
               .nav {
@@ -482,6 +502,35 @@
               }
             }
         }
+        
+        &-search {
+          width: 100%;
+          .searching-results {
+            padding: 15px 12px;
+            .swiper {
+              padding-bottom: 12px;
+            }
+            &-found {
+              margin: 12px 0;
+            }
+          }
+        }
+    }
+    .swiper-controls {
+      background: #FCFCFD;
+      border: 1px solid #F1F1F1;
+      padding: 16.5px 20px;
+      border-radius: 16px;
+      position: relative;
+      z-index: 4;
+      .controls-count {
+        font-size: 14px;
+        line-height: 16px;
+        color: #333333;
+        .count-select {
+          margin-left: 0;
+        }
+      }
     }
 
     .main {
@@ -509,22 +558,6 @@
             .photo {
                 padding-top: 32px;
               }
-          }
-          .swiper-controls {
-            background: #FCFCFD;
-            border: 1px solid #F1F1F1;
-            padding: 16.5px 20px;
-            border-radius: 16px;
-            position: relative;
-            z-index: 4;
-            .controls-count {
-              font-size: 14px;
-              line-height: 16px;
-              color: #333333;
-              .count-select {
-                margin-left: 0;
-              }
-            }
           }
         }
         .product {

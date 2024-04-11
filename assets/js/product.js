@@ -29,19 +29,3 @@ products = new Swiper('.swiper-products', {
       },
   }
 });
-
-const selectHead = document.querySelector('.select-head');
-const selectLists = document.querySelectorAll('.select-body li');
-
-
-selectHead.addEventListener('click', () => {
-    selectHead.parentElement.classList.toggle('showCountSelect')
-});
-
-selectLists.forEach(list => {
-    list.addEventListener('click', () => {
-        list.parentElement.parentElement.classList.toggle('showCountSelect');
-
-        selectHead.children[0].textContent = list.textContent
-    });
-})
